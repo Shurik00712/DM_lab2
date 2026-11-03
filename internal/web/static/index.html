@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Управление данными - файловая БД</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Управление данными</h1>
+    <span id="stats"></span>
+    <nav id="tabs"></nav>
+  </header>
+
+  <main>
+    <section id="search-panel" class="panel"></section>
+
+    <section class="toolbar">
+      <button id="btn-add">Добавить</button>
+      <button id="btn-edit">Изменить</button>
+      <button id="btn-del">Удалить по ID</button>
+      <button id="btn-reload" title="Обновить">Обновить</button>
+      <button id="btn-xlsx" title="Экспорт в xlsx">Экспорт xlsx</button>
+      <button id="btn-backup" title="Скачать backup.zip">Скачать backup</button>
+      <label class="file-btn" title="Восстановить из backup">Восстановить
+        <input type="file" id="in-restore" accept=".zip" hidden>
+      </label>
+
+      <span class="spacer"></span>
+
+      <button id="btn-clear-db" title="Удалить все записи, схемы остаются">Очистить БД</button>
+      <button id="btn-save">Сохранить БД</button>
+      <button id="btn-delete-db" class="danger" title="Удалить файлы БД полностью">Удалить БД</button>
+
+      <span id="status"></span>
+    </section>
+
+    <table id="table"><thead></thead><tbody></tbody></table>
+    <p id="empty" class="hidden">Нет данных.</p>
+  </main>
+
+  <dialog id="dialog">
+    <h2 id="dlg-title"></h2>
+    <form id="form"></form>
+    <div class="dialog-buttons">
+      <button id="dlg-cancel" type="button">Отмена</button>
+      <button id="dlg-ok" type="button">Сохранить</button>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
